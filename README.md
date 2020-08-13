@@ -34,7 +34,7 @@ This will output a file in the `LP Format` which can be used as input to a suita
 <img src="https://www.gurobi.com/wp-content/uploads/2018/12/logo-final.png" width="150px">
 
 
-### Observations
+## Observations
 > I can see why this is not of much consequence :P
 
 ----
