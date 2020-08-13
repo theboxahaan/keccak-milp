@@ -25,6 +25,19 @@ The table below shows the results visualised for 1 Round of *Keccak-p*[400]
  </tr>  
 </table>
 
+### Generating the `.lp` File
+```bash
+python mew.py --r [no. of rounds] > rounds.lp
+```
+This will output a file in the `LP Format` which can be used as input to a suitable solver. I used Gurobi.
+
+<img src="https://www.gurobi.com/wp-content/uploads/2018/12/logo-final.png" width="150px">
+
+
+### Observations
+> I can see why this is not of much consequence :P
+
+----
 ### References
 1. [https://keccak.team/](https://keccak.team/)
 2. [https://link.springer.com/chapter/10.1007/978-3-642-34704-7_5](https://link.springer.com/chapter/10.1007/978-3-642-34704-7_5)
