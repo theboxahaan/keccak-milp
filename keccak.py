@@ -66,4 +66,3 @@ class Keccak():
 			for i in range(5):
 				print(f"{display[i][j]} ", end="")
 			print("")
-			

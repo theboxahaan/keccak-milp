@@ -17,4 +17,4 @@ def get_diff(filename):
 		if p[0] == 'z':
 			z_list[int(p[2])][int(p[3])][int(p[4])] = int(i.split(' ')[1][:-1])	
 						
-	return (x_list, y_list, z_list, A_list)					
+	return (x_list, y_list, z_list, A_list)

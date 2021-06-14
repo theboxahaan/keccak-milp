@@ -4,8 +4,6 @@ from copy import deepcopy
 rho_val = [[0, 36, 3, 105, 210], [1, 300, 10, 45, 66], [190, 6, 171, 15, 253], [28, 55, 153, 21, 120], [91, 276, 231, 136, 78]]
 
 
-
-
 def constraint(n, w, rounds, bs):
 	print("Minimize")
 	#Objective Function
@@ -31,8 +29,8 @@ def constraint(n, w, rounds, bs):
 					print(f'{x_list[i][j][k]} >= 1')
 				else:
 					print(f'{x_list[i][j][k]} + ', end="")
-	for rnd in range(rounds) :
 
+	for rnd in range(rounds) :
 		y_list = [[[ f'y_{rnd}_{k}_{j}_{i}' for i in range(16)] for j in range(5)] for k in range(5)]
 		##inequalities for Computing parity bits
 		for i in range(5):
@@ -135,7 +133,7 @@ def constraint(n, w, rounds, bs):
 		x_list = deepcopy(z_list)
 
 #		print("*"*100)
-	
+
 	print("Binary\n\n")
 	for i in range(5):
 		for  j in range(5):

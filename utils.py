@@ -1,7 +1,8 @@
 from keccak import Keccak
 import re
+import argparse
 
-def parse(filename, verbose = None):
+def parse(filename, verbose=False):
 	'''
 	Parses r/+_{rnd}_+/ in .sol files into different lists
 	Entries should strictly be of the form x_0_0_1_0 = 1\\n
@@ -27,7 +28,7 @@ def parse(filename, verbose = None):
 				dic[mo.group()] = [[0 for i in range(16)] for i in range(5)]
 			dic[mo.group()][int(tmp[0])][int(tmp[1])] = int(j[:-1])
 	
-	if verbose is 'v':
+	if verbose:
 		print('Done Parsing File')
 		print(list(dic))
 	return dic	
@@ -66,4 +67,7 @@ def diff_prob(s1, s2):
 
 
 if __name__ == '__main__':
-	parse('Round1.sol', 'v')
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--file', type=str, help=".sol file to parse")
+	args = parser.parse_args()
+	parse(args.file, True)
