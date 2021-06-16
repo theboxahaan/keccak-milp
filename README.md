@@ -37,6 +37,16 @@ This will output a file in the `LP Format` which can be used as input to a suita
 ## Observations
 > I can see why this is not of much consequence :P
 
+## Results Table
+| `r` | `Best Objective` | `Time Taken` |
+|-----|------------------|--------------|
+| 1   | 1                | 8.33s        |
+| 2   | 4                | 250.4s       |
+| 3   | 10               | 1121.38s     |
+| 4   | 102              | 940s         |
+
+> Apart from the `r=1` run, all other runs were interrupted runs.
+> Looking for some serious computing power 🚀 
 ----
 ### References
 1. [https://keccak.team/](https://keccak.team/)
