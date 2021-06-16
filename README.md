@@ -4,7 +4,8 @@ This repository contains the code for creating the MILP model to count the numbe
 
 The "experiment" are the additional constraints on the `XOR` operation which help increase the accuracy of the predictions but seem to come at a cost. More on this later...
 
-<img src="https://paper-attachments.dropbox.com/s_48455D6ADC8DFBB72F715F59DE88DEC845623C60D1CA368FED24D2707582F853_1589313553671_Screenshot+2020-05-13+at+1.29.00+AM.png" width="500px">
+
+<img src="https://user-images.githubusercontent.com/32961084/122242358-e1ba2100-cee0-11eb-89e3-691e9468e6a7.png" width="80%">
 
 `mew.py` spits out a `.lp` file, which I fed into the Gurobi Optimizer to get the values of the optimized objective.
 `keccak.py` is my implementation of Keccak which is in no way optimized for anything. I basically used it to check the validity of the results I was getting.
