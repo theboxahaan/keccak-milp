@@ -45,7 +45,7 @@ $ gurobi_cl ResultFile='<resultfile.sol>' <modelfile.lp>
 > I can see why this is not of much consequence :P
 
 ## Results Table
-| `r` | `Best Objective` | `Time Taken` |
+| `r` | `Best Objective` | `After Time` |
 |-----|------------------|--------------|
 | 1   | 1                | 8.33s        |
 | 2   | 4                | 250.4s       |
