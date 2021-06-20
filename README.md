@@ -45,12 +45,12 @@ $ gurobi_cl ResultFile='<resultfile.sol>' <modelfile.lp>
 > I can see why this is not of much consequence :P
 
 ## Results Table
-| `r` | `Best Objective` | `milp_model_1` | `milp_model_2` |
-|-----|------------------|----------------|----------------|
-| 1   | 1                | 8.33s      (c) | 7.21s   (c)    |
-| 2   | 4                | 250.4s    (in) | 137.94s (c)    |
-| 3   | 10               | 1121.38s  (in) |                |
-| 4   | 102              | 940s      (in) |                |
+| `r`   | `Best Objective` | `milp_model_1`     | `milp_model_2` |
+|-------|------------------|--------------------|----------------|
+| `1`   | `1`              | **`8.33s`      `(c)`** | **`7.21s   (c)`**  |
+| `2`   | `4`              | `250.4s`    `(in)` | **`137.94s (c)`**  |
+| `3`   | `10`             | `1121.38s`  `(in)` |                |
+| `4`   | `102`            | `940s`      `(in)` |                |
 
 <sub><b><i>completed(c), incomplete(in)</i></b></sub>
 <sub>▲ The incomplete(in) times are the times for which Gurobi was allowed to run</sub>
