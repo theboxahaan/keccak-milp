@@ -45,15 +45,21 @@ $ gurobi_cl ResultFile='<resultfile.sol>' <modelfile.lp>
 > I can see why this is not of much consequence :P
 
 ## Results Table
-| `r` | `Best Objective` | `After Time` |
-|-----|------------------|--------------|
-| 1   | 1                | 8.33s        |
-| 2   | 4                | 250.4s       |
-| 3   | 10               | 1121.38s     |
-| 4   | 102              | 940s         |
+| `r` | `Best Objective` | `milp_model_1` | `milp_model_2` |
+|-----|------------------|----------------|----------------|
+| 1   | 1                | 8.33s      (c) | 7.21s   (c)    |
+| 2   | 4                | 250.4s    (in) | 137.94s (c)    |
+| 3   | 10               | 1121.38s  (in) |                |
+| 4   | 102              | 940s      (in) |                |
 
-> Apart from the `r=1` run, all other runs were interrupted runs.
+<sub>completed(c), incomplete(in)</sub>
+
+> For `model_1` apart from the `r=1` run, all other runs were interrupted runs.
 > Looking for some serious computing power 🚀 
+
+## Update
+Results from `milp_model_2_gen.py` are wayyy faster than `milp_model_1_gen.py` as some constraints have been optimized.
+
 ----
 ### References
 1. [https://keccak.team/](https://keccak.team/)
