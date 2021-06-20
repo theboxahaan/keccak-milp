@@ -52,7 +52,8 @@ $ gurobi_cl ResultFile='<resultfile.sol>' <modelfile.lp>
 | 3   | 10               | 1121.38s  (in) |                |
 | 4   | 102              | 940s      (in) |                |
 
-<sub>completed(c), incomplete(in)</sub>
+<sub><b><i>completed(c), incomplete(in)</i></b></sub>
+<sub>▲ The incomplete(in) times are the times for which Gurobi was allowed to run</sub>
 
 > For `model_1` apart from the `r=1` run, all other runs were interrupted runs.
 > Looking for some serious computing power 🚀 
