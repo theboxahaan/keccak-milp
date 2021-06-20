@@ -1,6 +1,8 @@
 import copy 
 
 class Keccak():
+	
+	sbox=[0,5,10,11,20,17,22,23,9,12,3,2,13,8,15,14,18,21,24,27,6,1,4,7,26,29,16,19,30,25,28,31]
 
 	def __init__(self, state):
 		self.state = state 
