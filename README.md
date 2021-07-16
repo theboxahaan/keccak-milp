@@ -59,7 +59,8 @@ $ gurobi_cl ResultFile='<resultfile.sol>' <modelfile.lp>
 > Looking for some serious computing power 🚀 
 
 ## Update
-Results from `milp_model_2_gen.py` are wayyy faster than `milp_model_1_gen.py` as some constraints have been optimized.
+- Results from `milp_model_2_gen.py` are wayyy faster than `milp_model_1_gen.py` as some constraints have been optimized.
+- `model_3` performance is not upto expectations
 
 ----
 ### References
