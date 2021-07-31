@@ -129,12 +129,13 @@ def constraint(n, w, rounds, bs):
 	
 	print("")
 	# [trial] hardcoding a constraint for optimum solution for 2 rounds
-	for j in range(5):
-		for k in range(16):
-			if j == 4 and k == 15:
-				print(f'- A_1_{j}_{k} + 4 >= 0 ')
-			else:	
-				print(f'- A_1_{j}_{k} ', end="")
+	for r in range(rounds):
+		for j in range(5):
+			for k in range(16):
+				if r == rounds-1 and j == 4 and k == 15:
+					print(f'- A_r_{j}_{k} + 4 >= 0 ')
+				else:	
+					print(f'- A_r_{j}_{k} ', end="")
 	
 	print("")
 
@@ -144,19 +145,19 @@ def constraint(n, w, rounds, bs):
 			for k in range(16):
 				print(f"x_0_{i}_{j}_{k}")
 	
-	for r in range(rounds):
+	for r in range(1, rounds):
 		for i in range(5):
 			for k in range(16):
 				print(f'p_{r}_{i}_{k}')
 				print(f'd_{r}_{i}_{k}')
                 
 
-	for r in range(rounds):
+	for r in range(1, rounds):
 		for j in range(5):
 			for k in range(16):
 				print(f'f_{r}_{j}_{k}')
 
-	for r in range(rounds):
+	for r in range(1, rounds):
 		for i in range(5):
 			for j in range(5):
 				for k in range(16):
