@@ -33,7 +33,7 @@ def constraint(n, w, rounds, bs):
 				else:
 					print(f'{x_list[i][j][k]} + ', end="")
 	print("\n")
-	for rnd in range(2, rounds) :
+	for rnd in range(1, rounds) :
 
 		y_list = [[[ f'y_{rnd}_{k}_{j}_{i}' for i in range(16)] for j in range(5)] for k in range(5)]
 		##inequalities for Computing parity bits
