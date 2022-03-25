@@ -42,7 +42,7 @@ $ gurobi_cl ResultFile='<resultfile.sol>' <modelfile.lp>
 
 
 ## Observations
-> *I can see why this is not of much consequence* 🤦
+> ~~*I can see why this is not of much consequence*~~ 🤦
 
 ## Results Table
 | `r`   | `Best Objective` | `milp_model_1`     | `milp_model_2` |
