@@ -73,7 +73,6 @@ def constraint(n, w, rounds, bs):
 						print(f'{y_list[i][j][k]} + ', end="")
 
 		# rho permutation
-
 		tmp = [[[ f'0' for i in range(16)] for j in range(5)] for k in range(5)]
 		
 		for i in range(5):
@@ -84,7 +83,6 @@ def constraint(n, w, rounds, bs):
 		y_list = deepcopy(tmp)
 
 		#pi permutation
-
 		tmp2 = [[[ f'0' for i in range(16)] for j in range(5)] for k in range(5)]
 		
 		for i in range(5):
@@ -93,8 +91,8 @@ def constraint(n, w, rounds, bs):
 					tmp2[j][(2*i + 3*j)%5][k] = y_list[i][j][k]  
 		
 		y_list = deepcopy(tmp2)
+		
 		#sbox chi
-	
 		z_list  = [[[ f'z_{rnd}_{k}_{j}_{i}' for i in range(16)] for j in range(5)] for k in range(5)]
 		print("")
 		for j in range(5):
@@ -112,18 +110,21 @@ def constraint(n, w, rounds, bs):
 		print("")
 		for k in range(16):
 			for j in range(5):
-				print(f'5 {z_list[0][j][k]} + 5 {z_list[1][j][k]} + 5 {z_list[2][j][k]} + 5 {z_list[3][j][k]} + 5 {z_list[4][j][k]} - {y_list[0][j][k]} - {y_list[1][j][k]} - {y_list[2][j][k]} - {y_list[3][j][k]} - {y_list[4][j][k]} >= 0 ')
-				print(f'5 {y_list[0][j][k]} + 5 {y_list[1][j][k]} + 5 {y_list[2][j][k]} + 5 {y_list[3][j][k]} + 5 {y_list[4][j][k]} - {z_list[0][j][k]} - {z_list[1][j][k]} - {z_list[2][j][k]} - {z_list[3][j][k]} - {z_list[4][j][k]} >= 0 ')
+				print(f'5 {z_list[0][j][k]} + 5 {z_list[1][j][k]} + 5 {z_list[2][j][k]} + 5 {z_list[3][j][k]} + 5 {z_list[4][j][k]}'
+							f' - {y_list[0][j][k]} - {y_list[1][j][k]} - {y_list[2][j][k]} - {y_list[3][j][k]} - {y_list[4][j][k]} >= 0 ')
+				print(f'5 {y_list[0][j][k]} + 5 {y_list[1][j][k]} + 5 {y_list[2][j][k]} + 5 {y_list[3][j][k]} + 5 {y_list[4][j][k]}'
+							f' - {z_list[0][j][k]} - {z_list[1][j][k]} - {z_list[2][j][k]} - {z_list[3][j][k]} - {z_list[4][j][k]} >= 0 ')
 
 		print("")
+
 		for k in range(16):
 			for j in range(5):
-				print(f'{y_list[0][j][k]} + {y_list[1][j][k]} + {y_list[2][j][k]} + {y_list[3][j][k]} + {y_list[4][j][k]} + {z_list[0][j][k]} + {z_list[1][j][k]} + {z_list[2][j][k]} + {z_list[3][j][k]} + {z_list[4][j][k]} - {bs} f_{rnd}_{j}_{k} >= 0')
+				print(f'{y_list[0][j][k]} + {y_list[1][j][k]} + {y_list[2][j][k]} + {y_list[3][j][k]} + {y_list[4][j][k]}'
+							f' + {z_list[0][j][k]} + {z_list[1][j][k]} + {z_list[2][j][k]} + {z_list[3][j][k]} + {z_list[4][j][k]}'
+							f' - {bs} f_{rnd}_{j}_{k} >= 0')
 				for i in range(5):
 					print(f'f_{rnd}_{j}_{k} - {z_list[i][j][k]} >= 0')
 					print(f'f_{rnd}_{j}_{k} - {y_list[i][j][k]} >= 0')
-		
-		
 		
 		x_list = deepcopy(z_list)
 
